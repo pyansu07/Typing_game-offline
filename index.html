@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Speed Game</title>
+  <style>
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .hidden {
+        display: none;
+    }
+    .leaderboard {
+        margin-top: 20px;
+    }
+</style>
+
+ 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- <h1 class="lol2">Typing Game</h1> -->
+  <div id="setup">
+      <label for="numPlayers">Number of Players:</label>
+      <input type="number" id="numPlayers" min="1" max="10">
+      <button onclick="startGame()">Start Game</button>
+  </div>
+  <div id="playerNames" class="hidden">
+      <form id="namesForm">
+          <!-- Player name inputs will be added here -->
+      </form>
+      <button onclick="beginTyping()">Begin Typing</button>
+  </div>
+  <div id="typingArea" class="hidden">
+      <!-- <p id="textToType">The quick brown fox jumps over the lazy dog.</p>
+      <textarea id="typingInput" rows="4" cols="50"></textarea> -->
+      <button onclick="submitTyping()">Submit</button>
+  </div>
+  <div id="leaderboard" class="hidden">
+      <h2>Leaderboard</h2>
+      <ol id="leaderboardList">
+          <!-- Leaderboard items will be added  -->
+      </ol>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<!-- /////////////////////////////////////////////// -->
+  <div id="lol" class="hidden">
+  <div class="wrapper">
+    <input type="text" class="input-field">
+    <div class="content-box">
+      <div class="typing-text">
+        <p></p>
+      </div>
+      <div class="content">
+        <ul class="result-details">
+          <li class="time">
+            <p>Time Left:</p>
+            <span><b>60</b>s</span>
+          </li>
+          <li class="mistake">
+            <p>Mistakes:</p>
+            <span>0</span>
+          </li>
+          <li class="wpm">
+            <p>WPM:</p>
+            <span>0</span>
+          </li>
+          <li class="cpm">
+            <p>CPM:</p>
+            <span>0</span>
+          </li>
+        </ul>
+        <button onclick="submitTyping()" id="lol2">Next Player</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ////////////////////////////////////////////////// -->
+  <script src="paragraphs.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
